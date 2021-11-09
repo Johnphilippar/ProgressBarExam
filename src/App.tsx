@@ -4,18 +4,18 @@ import { InnerContainer } from './components/InnerContainer';
 
 const App = () => {
 
-  const [time, setTime] = useState(0)
+  const [minValue, setMinValue] = useState(0)
   useEffect(() => {
     setTimeout(() => {
-      if (time <= 15) setTime(prevTime => prevTime + 15);
+      if (minValue <= 15) setMinValue(prevTime => prevTime + 15);
     }, 2000)
-  }, [time])
+  }, [minValue])
 
 
   return (
-    <StyledContainer>      <p style={{textAlign: 'center' , fontSize: '30px' , fontWeight: 600}}>{time}%</p>
-      <InnerContainer percentage={time} src="https://media.comicbook.com/2021/01/one-piece-wano-luffy-cosplay-1252700.jpeg?auto=webp&width=1200&height=627&crop=1200:627,smart" />
-
+    <StyledContainer>      
+      <p style={{textAlign: 'center' , fontSize: '30px' , fontWeight: 600}}>{minValue}%</p>
+      <InnerContainer percentage={minValue} src="https://media.comicbook.com/2021/01/one-piece-wano-luffy-cosplay-1252700.jpeg?auto=webp&width=1200&height=627&crop=1200:627,smart" />
     </StyledContainer>
     
   );
