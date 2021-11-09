@@ -13,9 +13,11 @@ const App = () => {
 
 
   return (
-    <StyledContainer>
+    <StyledContainer>      <p style={{textAlign: 'center' , fontSize: '30px' , fontWeight: 600}}>{time}%</p>
       <InnerContainer percentage={time} src="https://media.comicbook.com/2021/01/one-piece-wano-luffy-cosplay-1252700.jpeg?auto=webp&width=1200&height=627&crop=1200:627,smart" />
+
     </StyledContainer>
+    
   );
 }
 
